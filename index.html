@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Postman</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Postman Clone</h1>
+        <div class="my-div">
+            <div class="flex-container">
+                <div class="sh-div">
+                    <form action="">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <select type="choice" class="custom-select">
+                                        <option slelected>GET</option>
+                                        <option value="1">POST</option>
+                                        <option value="2">PUT</option>
+                                        <option value="3">DELETE</option>
+                                        <option value="4">PATCH</option>
+                                        <option value="5">HEAD</option>
+                                        <option value="6">OPTIONS</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="submit" class="btn btn-primary" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                            aria-controls="pills-home" aria-selected="true">Query</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                            aria-controls="pills-profile" aria-selected="false">Header</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                            aria-controls="pills-contact" aria-selected="false">Auth</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-body" role="tab"
+                            aria-controls="pills-body" aria-selected="false">Body</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-tests" role="tab"
+                            aria-controls="pills-tests" aria-selected="false">Tests</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="my-div body-div">
+                            <h5>Query Parameters</h5>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <form action="">
+                                        <div class="form-check text-center">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control" placeholder="parameter">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="value">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="my-div body-div">
+                            <h5>Http Headers</h5>
+                            <div class="row">
+                                <div class="col md-1">
+                                    <form action="">
+                                        <div class="form-check text-center">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-5">
+                                    <form>
+                                        <input type="text" value="Accept" class="form-control">
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <input type="text" class="form-control" value="*/*">
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col md-1">
+                                    <form action="">
+                                        <div class="form-check text-center">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-5">
+                                    <form>
+                                        <input type="text" value="User-Agent" class="form-control">
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <input type="text" class="form-control"
+                                            value="Thunder Client(https://www.thunderclient.com)">
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col md-1">
+                                    <form action="">
+                                        <div class="form-check text-center">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-5">
+                                    <form>
+                                        <input type="text" class="form-control" placeholder="Header">
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <input type="text" class="form-control" placeholder="value">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="my-div body-div">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                        aria-controls="home" aria-selected="true">None</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                        aria-controls="profile" aria-selected="false">Basic</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                        aria-controls="contact" aria-selected="false">Brarer</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#oauth" role="tab"
+                                        aria-controls="oauth" aria-selected="false">OAuth 2</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#ntlm" role="tab"
+                                        aria-controls="ntlm" aria-selected="false">NTLM</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <br>
+                                    <div>
+                                        <h5>No Authentication Selected</h5>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <br>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-md-4"><b>Username</b></div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="username">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4"><b>Password</b></div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <h5>Bearer Token</h5>
+                                        <textarea class="form-control" cols="30" rows="10" placeholder="enter token"></textarea>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="oauth" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <h5>OAuth Authentication</h5>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4"><b>Access token</b></div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="auto generated">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <p>The generated oauth token will be automatically added to Autorization header as
+                                            bearer token</p>
+                                        <br>
+                                        <h5>Generate New Token</h5>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="ntlm" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-md-4"><b>Username</b></div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="username">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4"><b>Password</b></div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="password">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4"><b>Workstation</b></div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="workstation (optional)">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4"><b>Domain</b></div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="domain (optional)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-body" role="tabpanel" aria-labelledby="pills-body-tab">
+                        <div class="my-div body-div">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#json" role="tab"
+                                        aria-controls="home" aria-selected="true">Json</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#xml" role="tab"
+                                        aria-controls="profile" aria-selected="false">Xml</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#text" role="tab"
+                                        aria-controls="contact" aria-selected="false">Text</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#form" role="tab"
+                                        aria-controls="contact" aria-selected="false">Form</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#form-encode" role="tab"
+                                        aria-controls="contact" aria-selected="false">Form-encode</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#graphql" role="tab"
+                                        aria-controls="contact" aria-selected="false">Graphql</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#binary" role="tab"
+                                        aria-controls="contact" aria-selected="false">Binary</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="json" role="tabpanel" aria-labelledby="home-tab">
+                                    <br>
+                                    <div>
+                                        <h5>Json Content</h5>
+                                        <textarea class="form-control" cols="30" rows="10"></textarea>
+                                        <br>
+                                        <button class="btn my-btn">Format</button>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="xml" role="tabpanel" aria-labelledby="profile-tab">
+                                    <br>
+                                    <div>
+                                        <h5>Xml Content</h5>
+                                        <textarea class="form-control" cols="30" rows="10"></textarea>
+                                        <br>
+                                        <button class="btn my-btn">Format</button>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="text" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <h5>Text Content</h5>
+                                        <textarea class="form-control" cols="30" rows="10" placeholder="Enter text"></textarea>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <h5>Form Fields</h5>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <input type="checkbox">
+                                                <label for="">File</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col md-1">
+                                                <form action="">
+                                                    <div class="form-check text-center">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <form>
+                                                    <input type="text" placeholder="fiels name" class="form-control">
+                                                </form>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <form>
+                                                    <input type="text" placeholder="value" class="form-control">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="form-encode" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <h5>Form Encode</h5>
+                                        <div class="row">
+                                            <div class="col md-1">
+                                                <form action="">
+                                                    <div class="form-check text-center">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <form>
+                                                    <input type="text" placeholder="name" class="form-control">
+                                                </form>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <form>
+                                                    <input type="text" placeholder="value" class="form-control">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="graphql" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <h5>Query</h5>
+                                        <br>
+                                        <textarea cols="30" rows="8" class="form-control"></textarea>
+                                        <br>
+                                        <h5>Variable</h5>
+                                        <textarea cols="30" rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="binary" role="tabpanel" aria-labelledby="contact-tab">
+                                    <br>
+                                    <div>
+                                        <h5>Binary File</h5>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-tests" role="tabpanel" aria-labelledby="pills-tests-tab">
+                        <div class="my-div body-div">
+                            <h5>Test</h5>
+                            <div class="flex-container">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <form action="">
+                                            <select type="choice" class="custom-select">
+                                                <option value="0" disabled selected>select</option>
+                                                <option value="1">ResponseCode</option>
+                                                <option value="2">ResponseBody</option>
+                                                <option value="3">ResponseTime</option>
+                                                <option value="4">Content-Type</option>
+                                                <option value="5">Content-Length</option>
+                                                <option value="6">Content-Transfer-Encoding</option>
+                                                <option value="7">Set Env Variable</option>
+                                                <option value="8">Header</option>
+                                                <option value="9">Json Query</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <form action="">
+                                            <select type="choice" class="custom-select">
+                                                <option value="0" disabled selected>action</option>
+                                                <option value="1">equal</option>
+                                                <option value="2">notEqual</option>
+                                                <option value="3">contains</option>
+                                                <option value="4">count</option>
+                                                <option value="5">isType</option>
+                                                <option value="6">isJson</option>
+                                                <option value="7">regex</option>
+                                                <option value="8">
+                                                    << /option>
+                                                <option value="9">
+                                                    <=< /option>
+                                                <option value="10">></option>
+                                                <option value="11">>=</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <form action="">
+                                            <input type="text" class="form-control" placeholder="value">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="status-report">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-6">Status:</div>
+                                        <div class="col-md-6"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-6">Size:</div>
+                                        <div class="col-md-6"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-6">Time:</div>
+                                        <div class="col-md-6"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+                <div class="my-div body-div"> 
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Response</a>
+                              <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Headers</a>
+                              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Cookies</a>
+                              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-test" role="tab" aria-controls="nav-contact" aria-selected="false">Test Results</a>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"></div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"></div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                            <div class="tab-pane fade" id="nav-test" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
