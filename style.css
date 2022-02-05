@@ -1,55 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@300&family=Yellowtail&display=swap');
-body{
-    font-family: 'Montserrat',sans-serif;
-    font-weight: semi-bold;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@300&family=Yellowtail&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: semi-bold;
 }
-h1{
-    font-family: Yellowtail;
-    color: #FF008E;
-    font-size: 4rem;
+h1 {
+  font-family: Yellowtail;
+  color: #ff008e;
+  font-size: 4rem;
 }
 .container-fluid {
-    margin-top: 40px !important;
-    width: 90% !important;
+  margin-top: 40px !important;
+  width: 90% !important;
 }
-.btn-primary{
-    background: linear-gradient(135deg,#ff9d00,#FF008E);
-    border:none !important;
-    width:80%;
+.btn-primary {
+  background: linear-gradient(135deg, #ff9d00, #ff008e);
+  border: none !important;
+  width: 80%;
+  border-radius: 0px;
 }
-.btn-primary:hover{
-    box-shadow: 0px 0px 20px rgba(255, 0, 136, 0.6);
+.btn-primary:hover {
+  box-shadow: 0px 0px 20px rgba(255, 0, 136, 0.6);
 }
-.nav-link.active{
-    background: linear-gradient(135deg,#ff9d00,#FF008E);
-    border:none !important;
-    color:white !important;
-    box-shadow: 0px 0px 20px rgba(255, 0, 136, 0.6);
+.nav-link.active {
+  background: linear-gradient(135deg, #ff9d00, #ff008e);
+  border: none !important;
+  color: white !important;
+  border-radius: 0px;
+  box-shadow: 0px 0px 20px rgba(255, 0, 136, 0.6);
 }
-.my-div{
-    border-radius: 5px;
-    box-shadow: 2px 2px 30px rgba(255, 0, 98, 0.6);
-    padding: 25px;
-    margin-top: 35px;
-    margin-bottom: 35px;
+.my-div {
+  border-radius: 0px;
+  box-shadow: 0px 0px 20px rgba(255, 0, 98, 0.6);
+  padding: 25px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
-.body-div{
-    min-height: 400px;
-    padding: 25px;
+.body-div {
+  min-height: 400px;
+  padding: 25px;
 }
-.form-check-input{
-    height: 20px;
-    width: 20px;
+.form-check-input {
+  height: 20px;
+  width: 20px;
 }
-.my-btn{
-    background: linear-gradient(135deg,#ff9d00,#FF008E);
-    border:none !important;
-    color:white !important;
+.my-btn {
+  background: linear-gradient(135deg, #ff9d00, #ff008e);
+  border: none !important;
+  color: white !important;
 }
-.my-btn:hover{
-    box-shadow: 0px 0px 20px rgba(255, 0, 136, 0.6);
+.my-btn:hover {
+  box-shadow: 0px 0px 20px rgba(255, 0, 136, 0.6);
 }
-.status-report{
-    margin-top:15px;
-    margin-bottom:15px;
+.status-report {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.form-control {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 0, 136, 0.6);
+}
+
+.custom-select {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 0, 136, 0.6);
 }
